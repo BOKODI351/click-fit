@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+.drag-area{
+  border: 2px dashed #fff;
+  height: 300;
+  width: 500px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.drag-area.active{
+  border: 2px solid #fff;
+}
+.drag-area .icon{
+  font-size: 100px;
+  color: #fff;
+}
+.drag-area header{
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+}
+.drag-area span{
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+  margin: 10px 0 15px 0;
+}
+.drag-area input{
+  padding: 10px 25px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: #fff;
+  color: #5256ad;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.drag-area img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.input_submit{
+  padding: 10px 25px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  color: #5256ad;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.i-title{
+    height: 140px;
+    overflow: hidden;
+}
+
+.i-title-wrapper{
+    height: 100%;
+    animation: move 15s ease-in-out infinite alternate;
+}
+
+@keyframes move {
+    33%{
+        transform: translateY(-140px);
+    }
+    66%{
+        transform: translateY(-255px);
+    }
+    100%{
+        transform: translateY(-370px);
+    }
+}
+
+.i-title-item{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links ul{
+    display: flex;
+}
+
+.nav-links ul li{
+    margin: 0 25px;
+}
+
+.nav-links ul li.active{
+    color: rgb(211, 211, 0);
+    font-weight: 600;
+}
+
+.menu-hamburger{
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 25px;
+}
+
+.mobile-menu {
+    margin-left: 0;
+}
+
+@media screen and (max-width: 900px) {
+    .navbar{
+        padding: 0;
+    }
+
+    .menu-hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.20);
+        backdrop-filter: blur(8px);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+    }
+
+    .mobile-menu {
+        margin-left: 0;
+    }
+    
+    .nav-links ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.2rem;
+    }
+}

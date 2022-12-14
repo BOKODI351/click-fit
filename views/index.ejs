@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function myFonction() {
+            document.querySelector(".nav-links").classList.toggle('mobile-menu');
+        }
+    </script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+                colors: {
+                    primary: "#00040f",
+                    secondary: "#00f6ff",
+                    dimWhite: "rgba(255, 255, 255, 0.7)",
+                    dimBlue: "rgba(9, 151, 124, 0.1)",
+                },
+                fontFamily: {
+                    poppins: ["Poppins", "sans-serif"],
+                },
+            },
+            screens: {
+                xs: "480px",
+                ss: "620px",
+                sm: "768px",
+                md: "1060px",
+                lg: "1200px",
+                xl: "1700px",
+                },
+            },
+        }
+      </script>
+    <script src="/js/script.js"></script>
+    <title>click fit</title>
+</head>
+<body>
+    <div id="root">
+        <div class="bg-primary w-full overflow-hidden">
+            <div class="sm:px-16 px-6 flex justify-center items-center">
+                <div class="xl:max-w-[1280px] w-full">
+                    <nav class="w-full flex py-6 justify-between items-center navbar">
+                        <div class='absolute z-[0] w-[60%] h-[60%] -left-[50%] rounded-full blue__gradient' ></div>
+                        <img src="./assets/logo.png" alt="logo" class="w-[100px] h-[100px] invert-[100%] cursor-pointer">
+                        <div class="nav-links" id="nav_links">
+                            <ul>
+                                <li class="t-poppins font-normal cursor-pointer text-[16px] text-white active">
+                                    <a href="/">HOME</a>
+                                </li>
+                                <li class="t-poppins font-normal cursor-pointer text-[16px] text-white">
+                                    <a href="/about">ABOUT</a>
+                                </li>
+                                <li class="t-poppins font-normal cursor-pointer text-[16px] text-white">
+                                    <a href="/product">PRODUCT</a>
+                                </li>
+                                <li class="t-poppins font-normal cursor-pointer text-[16px] text-white">
+                                    <a href="/acoount">LOGIN/REGISTER</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <img src="./assets/menu-btn.png" alt="menu" class="menu-hamburger cursor-pointer" onclick="myFonction()">
+                    </nav>
+                </div>
+            </div>
+            <div class="bg-primary flex justify-center items-start">
+                <div class="xl:max-w-[1280px] w-full">
+                    <section id="home" class="flex md:flex-row flex-col sm:py-16 py-6">
+                        <div class="flex-1 flex justify-center items-start flex-col xl:px-0 sm:px-16 px-6">
+                            <div class="flex flex-row justify-between items-center w-full">
+                                <h1 class="flex-1 font-poppins font-semibold 
+                                    ss:text-[60px] text-[40px] text-white ss:leading-[100px] leading-[75px]">
+                                    Remember who<br class="sm:block hidden" />
+                                </h1>
+                            </div>
+                            <h1 class='font-poppins font-semibold 
+                                ss:text-[60px] text-[40px] text-white ss:leading-[100px] leading-[75px] w-full'>
+                                you're doing it for.
+                            </h1>
+                            <div class="i-title">
+                                <div class="i-title-wrapper">
+                                    <div class="i-title-item">
+                                        <p class="font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px] max-w-[470px] mt-5">
+                                            When you're at the gym feeling like you'll never be one of those people who look like they've
+                                             been at it their entire lives,remember that they all started somewhere.
+                                        </p>
+                                    </div>
+                                    <div class="i-title-item">
+                                        <p class="font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px] max-w-[470px] mt-5">
+                                            Don't wait until you've reached your goal to be proud of yourself. 
+                                            Be proud of every step you take toward reaching that goal.
+                                        </p>
+                                    </div>
+                                    <div class="i-title-item">
+                                        <p class="font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px] max-w-[470px] mt-5">
+                                            Ability is what you’re capable of doing.
+                                             Motivation determines what you do. Attitude determines how well you do it.
+                                        </p>
+                                    </div>
+                                    <div class="i-title-item">
+                                        <p class="font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px] max-w-[470px] mt-5">
+                                            Never give up on a dream just because of the time it will take to accomplish it.
+                                             The time will pass anyway.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-1 flex justify-center items-center md:my-0 my-10 relative">
+                            <img src="./assets/img_fitness.png" alt="pushups" class="w-[80%] h-[100%] relative z-[5]">
+                        </div>
+                    </section>
+                    <div className="w-full flex justify-between items-center 
+                        md:flex-row flex-col pt-6 border-t-[1px] border-t-[#3F3E45]" >
+                    <section>
+                        <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-[#3F3E45]" >
+                            <div class="flex flex-row justify-center items-center sm:mt-0 mt-6">
+                                <p class="font-poppins font-semiblod text-white text-[18px] max-w-[1000px]" id="text"></p>
+                            </div>
+                            <div class="flex flex-row justify-center items-center mt-6" >
+                                <p class="font-poppins font-normal text-gradient text-[18px] mr-5">YEAR: <span id="year"></span></p>
+                                <p class="font-poppins font-normal text-gradient text-[18px] mr-5">NUMBER: <span id="number"></span></p>
+                                <p class="font-poppins font-normal text-gradient text-[18px]">FOUND: <span id="found"></span></p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="flex flex-row justify-center items-centerr mt-10">
+                        <form action="/" method="post" enctype="multipart/form-data">
+                            <div class="drag-area">
+                                <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                                <header>Drag & Drop to Upload File</header>
+                                <span>IN</span>
+                                <input type="file" name="image">
+                                <input type="submit" value="SUBMIT" class="mt-5 mb-5">
+                            </div>
+                        </form>
+                    </section>
+                    <section class="flex justify-center items-center sm:py-16 py-6 flex-col">
+                        <div class="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-[#3F3E45]">
+                            <p class="font-poppins font-normal text-[18px] text-center leading-[27px] text-white">
+                              <span class="mr-2 text-dimWhite">Copyright &copy;</span> 2022 Omar. All Rights Reserved.
+                            </p>
+                            <div class="flex flex-row md:mt-0 mt-6">
+                                <a href="/instagram" target="_blank" class="mr-6">
+                                  <img src="./assets/instagram.svg" />
+                                </a>
+                                <a href="/facebook" target="_blank" class="mr-6">
+                                    <img src="./assets/facebook.svg" />
+                                </a>
+                                <a href="/twitter" target="_blank" class="mr-6">
+                                    <img src="./assets/twitter.svg" />
+                                </a>
+                                <a href="/linkedin" target="_blank" class="mr-6">
+                                    <img src="./assets/linkedin.svg" />
+                                </a>
+                            </div>
+                          </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
